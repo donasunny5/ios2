@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -69,7 +69,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
+        if let city = searchTextField.text {
+            selectedCityList.append(city)
+            alert(message: "\(city) added to City List")
+            NetworkLayer.singleton.getCityWeatherFor(cityName: city) { weatherModel, _ in
+                guard let weatherModel = weatherModel else { return }
+                self.weatherModel = weatherModel
+                self.updateScreenData(weatherModel: weatherModel)
+            }
+        }
     }
+    
     
     func alert(message: String, title: String = "") {
       let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
