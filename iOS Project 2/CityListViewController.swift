@@ -8,9 +8,9 @@
 import UIKit
 
 class CityListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     
-
+    
+    
     @IBOutlet weak var cityListTableView: UITableView!
     
     var cityNameList = [String]()
@@ -19,6 +19,19 @@ class CityListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         cityListTableView.delegate = self
         cityListTableView.dataSource = self
+        
+        for cityName in cityNameList {
+            NetworkLayer.singleton.getCityWeatherFor(cityName: cityName, completion: { weatherData, error in
+                DispatchQueue.main.async {
+                    if let weatherData = weatherData {
+                        self.weatherDataArray.append(weatherData)
+                        if self.weatherDataArray.count == self.cityNameList.count {
+                            self.cityListTableView.reloadData()
+                        }
+                    }
+                }
+            })
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -63,9 +63,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
             self.weatherImageView.image = multiColorImageFor(code: weatherModel.current?.condition?.code ?? 0)
         }
     }
-
     
-    @IBAction func citiesButtonTapped(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSavedCities" {
+            if let destination = segue.destination as? CityListViewController {
+                destination.cityNameList = selectedCityList
+            }
+        }
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {

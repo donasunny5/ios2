@@ -43,7 +43,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cities"/>
                                 <connections>
-                                    <action selector="citiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxC-x5-r4P"/>
                                     <segue destination="8nD-mx-ETg" kind="show" identifier="viewSavedCities" id="Q2N-Pf-1m6"/>
                                 </connections>
                             </button>
@@ -199,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTG-6L-0pN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="26"/>
+            <point key="canvasLocation" x="1057" y="-2"/>
         </scene>
     </scenes>
     <resources>
