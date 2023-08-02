@@ -51,6 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
                 guard let weatherModel = weatherModel else { return }
                 self.weatherModel = weatherModel
                 self.updateScreenData(weatherModel: weatherModel)
+                self.selectedCityList.append(cityName)
             }
         }
     }
