@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,28 +46,27 @@
                                     <action selector="citiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxC-x5-r4P"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partly Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH9-kv-5Gx">
-                                <rect key="frame" x="271.33333333333331" y="123" width="101.66666666666669" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH9-kv-5Gx">
+                                <rect key="frame" x="373" y="123" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-aj-9Pi">
-                                <rect key="frame" x="96.666666666666671" y="198.66666666666669" width="200.66666666666669" height="198.66666666666669"/>
+                                <rect key="frame" x="96.666666666666686" y="198.33333333333337" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Y4i-oc-aCf"/>
                                     <constraint firstAttribute="width" constant="200" id="qIv-Dl-5Vz"/>
                                 </constraints>
-                                <imageReference key="image" image="cloud.sun.fill" catalog="system" renderingMode="original"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-dA-Jl9">
-                                <rect key="frame" x="100.00000000000001" y="418.33333333333331" width="62.666666666666671" height="39.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-dA-Jl9">
+                                <rect key="frame" x="100" y="418.33333333333331" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m8E-Wj-eUH">
-                                <rect key="frame" x="182.66666666666666" y="418.33333333333331" width="57" height="32"/>
+                                <rect key="frame" x="120" y="418.33333333333331" width="57" height="32"/>
                                 <segments>
                                     <segment title="C"/>
                                     <segment title="F"/>
@@ -78,8 +76,8 @@
                                     <action selector="segmentControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RJl-gS-ePx"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-8I-uwT">
-                                <rect key="frame" x="151" y="499.33333333333331" width="91.333333333333314" height="33.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-8I-uwT">
+                                <rect key="frame" x="196.66666666666666" y="499.33333333333331" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,7 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud.sun.fill" catalog="system" width="128" height="96"/>
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">

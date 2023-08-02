@@ -11,10 +11,10 @@ class NetworkLayer {
     
     private init () { }
     
-    static let shared = NetworkLayer()
+    static let singleton = NetworkLayer()
     
     func getCityWeatherFor(cityName: String, completion: @escaping (WeatherModel?, Error?) -> ()) {
-        let url = "http://api.weatherapi.com/v1/current.json?key=481c87a2c9c54e2e992210038230208&q=\(cityName)&aqi=no".addingPercentEncoding(withAllowedCharacters:
+        let url = "https://api.weatherapi.com/v1/current.json?key=481c87a2c9c54e2e992210038230208&q=\(cityName)&aqi=no".addingPercentEncoding(withAllowedCharacters:
                 .urlFragmentAllowed)!
         guard let finalUrl = URL(string: url) else { return }
         let task = URLSession.shared.dataTask(with: finalUrl, completionHandler: { data, response, error in
